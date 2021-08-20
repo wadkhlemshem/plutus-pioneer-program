@@ -30,12 +30,56 @@
   - The `EmulatorTrace`-monad.
   - The `Contract`-monad.
 
+- [Lecture #5](https://youtu.be/SsaVjSsPPcg)
+
+  - Values.
+  - Native Tokens.
+  - NFT's.
+
+- [Lecture #6](https://youtu.be/24SHPHEc3zo)
+
+  - Oracles.
+  - Using the PAB.
+
+- [Lecture #7](https://youtu.be/uwZ903Zd0DU)
+
+  - Commit schemes.
+  - State machines.
+
+- [Lecture #8](https://youtu.be/zW3D2iM5uVg)
+
+  - Another state machine example: token sale.
+  - Automatic testing using emulator traces.
+  - Interlude: optics.
+  - Property based testing with QuickCheck.
+  - Testing Plutus contracts with property based testing.
+
+- [Lecture #9](https://youtu.be/H1WPL01qWCc)
+
+  - Marlowe overview ([slides](Marlowe_Plutus_Pioneers_June_2021.pdf)).
+  - Marlowe in Plutus.
+  - Marlowe Playground demo.
+
+- [Lecture #10](https://youtu.be/CPfcyDaDtt8)
+
+  - Uniswap overview.
+  - Uniswap implementation in Plutus.
+  - Deploying Uniswap with the PAB.
+  - Demo.
+  - Using `curl` to interact with the PAB.
+
 ## Code Examples
 
 - Lecture #1:  [English Auction](code/week01)
 - Lecture #2:  [Simple validation](code/week02)
 - Lecture #3:  [Script Context & Parameterized Contracts](code/week03)
 - Lecture #4:  [Monad, Traces & Contracts](code/week04)
+- Lecture #5:  [Native Tokens](code/week05)
+- Lecture #6:  [Oracles](code/week06)
+- Lecture #7:  [State Machines](code/week07)
+- Lecture #8:  [Testing](code/week08)
+- Lecture #9:  [Marlowe](code/week09)
+- Lecture #10: [Uniswap](code/week10)
 
 ## Exercises
 
@@ -73,6 +117,30 @@
 
   - Implement function `payTrace` in the [Homework](code/week04/src/Week04/Homework.hs) module.
   - Handle exceptions thrown by `submitTx` in function `payContract` in the same module.
+
+- Week #5
+
+  - Add a deadline to the minting policy in the [Homework1](code/week05/src/Week05/Homework1.hs) module.
+  - Fix the token name to the empty ByteString in the NFT contract in the [Homework2](code/week05/src/Week05/Homework2.hs) module.
+
+- Week #6
+
+  - Get the Oracle demo running and extend it in some way.
+
+- Week #7
+
+  - Implement the game of "Rock, Paper, Scissors" using state machines.
+
+- Week #8
+
+  - Add a new operation close to the TokenSale-contract that allows the seller to close the contract and retrieve all remaining funds.
+  - Modify the tests accordingly.
+
+- Week #9
+  - Modify the example Marlowe contract, so that Charlie must put down twice the deposit in the very beginning, which gets split between Alice and Bob if Charlie refuses to make his choice.
+
+- Week #10
+  - Get the Uniswap demo running and extend it in some way.
 
 ## Some Plutus Modules
 
